@@ -2,7 +2,7 @@ var assert = require("assert");
 var io = require('socket.io-client');
 
 
-var socketURL = 'http://127.0.0.1:8080';
+var socketURL = 'http://0.0.0.0:8080';
 
 var options = {
   transports: ['websocket'],
@@ -16,7 +16,7 @@ var chatUser3 = {'name': 'Dana'};
 describe("Chat Server", function () {
   it('Should return user id', function (done) {
     var client1 = io.connect(socketURL, options);
-    client1.on('connect', function (data) {
+    client1.on('connect', function () {
       client1.emit('getUserId', {}, function (re) {
         assert.equal(re.success, true, "success should be true");
         assert.equal(re.error, null, "there should be no error set");
