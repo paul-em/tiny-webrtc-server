@@ -2,7 +2,7 @@ var assert = require("assert");
 var io = require('socket.io-client');
 
 
-var socketURL = 'http://localhost:8080';
+var socketURL = 'http://127.0.0.1:8080';
 
 var options = {
   transports: ['websocket'],
