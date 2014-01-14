@@ -1,0 +1,38 @@
+{
+  "name": "tiny-webrtc-server",
+  "version": "0.1.0",
+  "main": "./lib/tiny-webrtc-server.js",
+  "description": "a socket.io webrtc server for managing rooms and exchaning iceCandidates. Combine this with tiny-webrtc client",
+  "homepage": "https://github.com/paul-em/tiny-webrtc-server",
+  "bugs": "https://github.com/paul-em/tiny-webrtc-server/issues",
+  "keywords": [
+    "tiny webrtc",
+    "webrtc",
+    "livestream"
+  ],
+  "author": {
+    "name": "Paul Em",
+    "email": "paul3m@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paul-em/tiny-webrtc-server"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "devDependencies": {
+    "nodeunit": ">= 0.8.2"
+  },
+  "dependencies": {
+    "socket.io": "0.9.16"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "scripts": {
+    "test": "nodeunit test"
+  }
+}
