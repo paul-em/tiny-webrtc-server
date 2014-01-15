@@ -1,8 +1,23 @@
 var assert = require("assert");
 var io = require('socket.io-client');
+var os = require('os');
 
+var ifaces = os.networkInterfaces();
+var ip;
+for (var dev in ifaces) {
+  var alias = 0;
+  ifaces[dev].forEach(function (details) {
+    if (details.family == 'IPv4') {
+      console.log(dev + (alias ? ':' + alias : ''), details.address);
+      ip = details.address;
+      ++alias;
+    }
+  });
+}
 
-var socketURL = 'http://0.0.0.0:8080';
+console.log(ip);
+
+var socketURL = 'http://' + ip + ':8080';
 
 var options = {
   transports: ['websocket'],
