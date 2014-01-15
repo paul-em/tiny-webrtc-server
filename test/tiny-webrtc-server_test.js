@@ -1,3 +1,4 @@
+console.log("running test file");
 var assert = require("assert");
 var io = require('socket.io-client');
 var os = require('os');
