@@ -1,6 +1,6 @@
 {
   "name": "tiny-webrtc-server",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "main": "./lib/tiny-webrtc-server.js",
   "description": "a socket.io webrtc server for managing rooms and exchaning iceCandidates. Combine this with tiny-webrtc client",
   "homepage": "https://github.com/paul-em/tiny-webrtc-server",
